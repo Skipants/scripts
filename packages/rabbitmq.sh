@@ -26,4 +26,3 @@ tar -xaf "${CACHED_DOWNLOAD}" --strip-components=1 --directory "${RABBITMQ_DIR}"
 ln -s "${RABBITMQ_DIR}/sbin/"* "${HOME}/bin"
 bash -c "rabbitmq-server -detached 2>&1 >/dev/null" >/dev/null & disown
 sleep 5
-rabbitmqctl status
